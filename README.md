@@ -13,8 +13,14 @@ Created using [Chocolat](https://chocolatapp.com) and Safari's web preview after
 
 Media queries are used to optimize the theme for mobile devices.
 
+Font used is Roboto Condensed(https://www.google.com/fonts/specimen/Roboto+Condensed) and is served via the Google Fonts API.
+
+Link color is used from the [Android Color palette](http://developer.android.com/design/style/color.html).
+
 ###Usage
 
 Simply copy the theme files to `Ghost/content/themes/`. Make sure the files exist in a subdirectory of `themes/`. A restart of Ghost is usually needed for the theme to appear in preferences.
+
+Read more about Ghost themes on [Ghost Docs](https://docs.ghost.org/themes/#create-your-own)
 
 ###Licence
