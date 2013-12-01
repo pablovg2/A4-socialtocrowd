@@ -6,7 +6,7 @@
 		{{#post}}
 		<header>
 			<h1>{{{title}}}</h1>
-			<span>Written by <h4>{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}</span>
+			<aside>Written by <h4>{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}</aside>
 		</header>
 		<section>
 			{{content}}
