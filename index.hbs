@@ -1,21 +1,76 @@
-{{!< default}}
-
-<header class="header">
-	<h1>{{meta_title}}</h1>
-	<p>{{meta_description}}</p>
-</header>
-
-<section class="content">
-	{{#foreach posts}}
-	<article class="{{post_class}}">
-		<header>
-			<a href="{{url}}"><h2>{{{title}}}</h2></a>
-			<aside>Written by <h4>{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}</aside>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>{{{meta_title}}}</title>
+	<meta name="description" content="{{meta_description}}" />
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300" rel="stylesheet" type="text/css">
+	<style>
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {color:inherit;margin:0;padding:0;border:none;font:inherit;font-size:100%}
+		body {background-color:rgb(239,239,239);color:rgb(0,0,0);font-family:'Roboto Condensed',sans-serif;font-size:18px;font-weight:300;}
+		body > div {margin-left:33%}
+		body > div > div {margin:0 auto;max-width:640px;padding:40px}
+		a:hover {color:rgb(45,166,222)}
+		h1,h2,h3 {font-size:24px}
+		h1,p {margin-bottom:20px}
+		em {font-style:italic}
+		.cover {background-color:rgb(83,83,83);height:100%;position:fixed;top:0;width:33%;z-index:2}
+		.cover figure {background-image: url({{@blog.cover}});background-origin:content-box;background-position:center;background-size:cover;box-shadow:inset -2px 0 16px rgba(0,0,0,.2);min-height:100%;width:100%}
+		.cover figcaption {bottom:20px;color:rgb(255,255,255);font-size:14px;position:absolute;right:20px}
+		.header {color:rgb(136,136,136);font-size:24px;padding:40px 0}
+		main {background-color:rgb(255,255,255);box-shadow:0 2px 16px rgba(0,0,0,.1);padding:40px}
+		main > footer {color:rgb(136,136,136);font-size:14px;margin-top:40px;overflow:hidden;text-align:center}
+		.content > article {margin-bottom:40px}
+		article > header {margin-bottom:20px}
+		article > header a {text-decoration:none}
+		article > header h1, article header h2 {margin-bottom:0}
+		article > header aside {color:rgb(136,136,136);font-size:14px}
+		article > header h4 {display:inline}
+		nav.pagination .home, nav.pagination .previous {float:left}
+		nav.pagination .next {float:right}
+		@media all and (max-width:954px) {
+			.cover {height:33%;width:100%;position:absolute}
+			body > div {margin-left:0;position:absolute;top:33%;width:100%}
+			body > div > div {padding:40px 0}
+		}
+		@media all and (max-width:720px) {.header {padding:0 40px}}
+	</style>
+	{{ghost_head}}
+</head>
+<body>
+	<aside class="cover">
+		<figure>
+			<figcaption>
+				Powered by <a href="https://ghost.org">Ghost</a>
+			</figcaption>
+		</figure>
+	</aside>
+	<div><div>
+		<header class="header">
+			<h1>{{meta_title}}</h1>
+			<p>{{meta_description}}</p>
 		</header>
-		<section>
-		<p>{{excerpt}}&hellip;</p>
-		</section>
-	</article>
-	{{/foreach}}
-	{{pagination}}
-</section>
+		<main>
+			<section class="content">
+				{{#foreach posts}}
+				<article class="{{post_class}}">
+					<header>
+						<a href="{{url}}"><h2>{{{title}}}</h2></a>
+						<aside>Written by <h4>{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}</aside>
+					</header>
+					<section>
+					<p>{{excerpt}}&hellip;</p>
+					</section>
+				</article>
+				{{/foreach}}
+			</section>
+			<footer>
+				{{pagination}}
+			</footer>
+		</main>
+	</div></div>
+</body>
+</html>
