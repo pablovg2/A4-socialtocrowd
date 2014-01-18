@@ -1,0 +1,12 @@
+.blog-cover {background-color:rgb(83,83,83);height:100%;position:fixed;top:0;width:33%;z-index:2}
+.blog-cover figure {background-image: url({{@blog.cover}});background-origin:content-box;background-position:center;background-size:cover;box-shadow:inset -2px 0 16px rgba(0,0,0,.2);min-height:100%;width:100%}
+.blog-cover figcaption {bottom:20px;color:rgb(255,255,255);font-size:14px;position:absolute;right:20px}
+.outer-wrapper {margin-left:33%}
+
+.index-header {font-size:24px;padding:40px}
+.index-header p:last-child {margin-bottom:0}
+
+@media all and (max-width:954px) {
+	.blog-cover {height:33%;width:100%;position:absolute}
+	.outer-wrapper {margin-left:0;position:absolute;top:33%;width:100%}
+}

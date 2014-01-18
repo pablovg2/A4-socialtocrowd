@@ -8,69 +8,33 @@
 	<meta name="MobileOptimized" content="320" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300" rel="stylesheet" type="text/css">
-	<style>
-		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {color:inherit;margin:0;padding:0;border:none;font:inherit;font-size:100%}
-		body {background-color:rgb(239,239,239);color:rgb(136,136,136);font-family:'Roboto Condensed',sans-serif;font-size:18px;font-weight:300;margin:0 auto;max-width:640px;padding:44px 0 40px 0}
-		.outer-wrapper {margin-left:33%}
-		.inner-wrapper {margin:0 auto;max-width:640px;padding:40px 0 80px 0}
-		a:hover {color:rgb(45,166,222)}
-		h1,h2,h3 {font-size:24px}
-		h1,p {margin-bottom:20px}
-		em {font-style:italic}
-		.blog {background-color:rgb(255,255,255);box-shadow:0 2px 16px rgba(0,0,0,.1);padding:40px}
-		.blog-footer {color:rgb(136,136,136);font-size:14px;margin-top:40px;overflow:hidden;text-align:center}
-		.blog-post {color:rgb(76,76,76);margin-bottom:40px}
-		.post-header {margin-bottom:10px}
-		.post-header a {text-decoration:none}
-		.post-header h1, .post-header h2 {margin-bottom:0}
-		.post-footer {color:rgb(136,136,136);font-size:14px;font-style:italic}
-		.post-footer h4 {display:inline}
-		.post-content blockquote {border-left:2px solid rgb(239,239,239);padding-left:18px}
-		.post-content img {display:block;margin:0 auto;max-width:100%}
-		.post-content ol, .post-content ul {margin-left:40px}
-		.post-content pre {background-color:rgb(239,239,239);border-radius:3px;margin-bottom:20px;padding:10px 6px;overflow:scroll}
-		.post-content code {background-color:rgb(239,239,239);border-radius:3px;font-family:monospace;padding:0 4px;white-space:pre;word-break:normal;word-wrap:normal}
-		.post-content hr {background-color:rgb(239,239,239);border:none;height:1px}
-		.author-icon {background-size:contain;border-radius:12px;display:inline-block;height:24px;margin:0 6px;position:relative;top:6px;width:24px}
-		.pagination .home, nav.pagination .previous {float:left}
-		.pagination .next {float:right}
-		.pagination a {text-decoration:none}
-		@media all and (max-width:640px) {
-			.blog {padding:20px}
-		}
-		aside.night-toggle {background-color:rgb(38,38,38);border-radius:12px;cursor:pointer;height:24px;position:absolute;right:10px;top:10px;width:24px}
-		body, aside.night-toggle, .blog-post, .blog, .post-content pre, .post-content code, .post-content hr,  .post-content blockquote {transition:all .6s}
-		body.night aside.night-toggle {background-color:rgb(239,239,239)}
-		body.night {background-color:rgb(38,38,38);color:rgb(203,203,203)}
-		body.night .blog-post {color:rgb(203,203,203)}
-		body.night .blog {background-color:rgb(38, 38, 38);box-shadow:none}
-		body.night .post-content img {box-shadow:0 2px 16px rgba(0,0,0,.1)}
-		body.night .post-content pre, body.night .post-content code, body.night .post-content hr {background-color:rgb(103,103,103)}
-		body.night .post-content blockquote {border-left:2px solid rgb(103,103,103)}
-	</style>
+	<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
 	{{ghost_head}}
 </head>
 <body>
 	<aside class="night-toggle" onclick="document.body.classList.toggle('night')"></aside>
-	<main class="blog">
-		<article class="blog-post {{post_class}}">
-			{{#post}}
-			<header class="post-header">
-				<h1>{{{title}}}</h1>
-			</header>
-			<section class="post-content">
-				{{content}}
-			</section>
-			<footer class="post-footer">
-				Written by <h4>{{#if @author.image}}<i class="author-icon" style="background-image:url('{{author.image}}')"></i>{{/if}}{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}
+	<div class="outer-wrapper"><div class="inner-wrapper">
+		<main class="blog">
+			<article class="blog-post {{post_class}}">
+				{{#post}}
+				<header class="post-header">
+					<h1>{{{title}}}</h1>
+				</header>
+				<section class="post-content">
+					{{content}}
+				</section>
+				<footer class="post-footer">
+					Written by <h4>{{#if @author.image}}<i class="author-icon" style="background-image:url('{{author.image}}')"></i>{{/if}}{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}
+				</footer>
+				{{/post}}
+			</article>
+			<footer class="blog-footer">
+				<nav class="pagination">
+					<a class="home" href="{{@blog.url}}">Back</a>
+				</nav>
 			</footer>
-			{{/post}}
-		</article>
-		<footer class="blog-footer">
-			<nav class="pagination">
-				<a class="home" href="{{@blog.url}}">Back</a>
-			</nav>
-		</footer>
-	</main>
+		</main>
+	</div></div>
 </body>
 </html>
