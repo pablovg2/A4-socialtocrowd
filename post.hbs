@@ -8,8 +8,8 @@
 	<meta name="MobileOptimized" content="320" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+	<link rel="stylesheet" type="text/css" href="{{asset 'css/default.css'}}">
+	<link rel="stylesheet" type="text/css" href="{{asset 'css/post.css'}}">
 	{{ghost_head}}
 </head>
 <body>
@@ -25,7 +25,7 @@
 					{{content}}
 				</section>
 				<footer class="post-footer">
-					Written by <h4>{{#if @author.image}}<i class="author-icon" style="background-image:url('{{author.image}}')"></i>{{/if}}{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}
+					Written by <h4>{{#if author.image}}<i class="author-icon" style="background-image:url('{{author.image}}')"></i>{{/if}}{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}
 				</footer>
 				{{/post}}
 			</article>
