@@ -15,7 +15,7 @@ Media queries are used to optimize the theme for mobile devices.
 
 Font used is [Roboto Condensed](https://www.google.com/fonts/specimen/Roboto+Condensed) and is served via the Google Fonts API.
 
-Link color is used from the [Android Color palette](http://developer.android.com/design/style/color.html).
+Link and feature colour is used from the [Android Color palette](http://developer.android.com/design/style/color.html).
 
 ###Usage
 
@@ -25,9 +25,9 @@ Read more about Ghost themes on [Ghost Docs](https://docs.ghost.org/themes/#crea
 
 ###Copyright & Licence
 
-Copyright (c) 2013 Iiro Jäppinen - Released under The MIT License.
+Copyright (c) 2014 Iiro Jäppinen - Released under The MIT License.
 
-Copyright (c) 2013 Ghost Foundation - Released under The MIT License.
+Copyright (c) 2014 Ghost Foundation - Released under The MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
