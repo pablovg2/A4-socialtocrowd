@@ -1,50 +1,20 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="UTF-8" />
-	<title>{{{meta_title}}}</title>
-	<meta name="description" content="{{meta_description}}" />
-	<meta name="HandheldFriendly" content="True" />
-	<meta name="MobileOptimized" content="320" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
-	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
-	<link rel="stylesheet" type="text/css" href="/assets/css/index.css">
-	{{ghost_head}}
-</head>
-<body>
-	<aside class="blog-cover">
-		<figure{{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{/if}}">
-			<figcaption>
-				Powered by <a href="https://ghost.org">Ghost</a>
-			</figcaption>
-		</figure>
-	</aside>
-	<div class="outer-wrapper"><div class="inner-wrapper">
-		<header class="index-header">
-			<h1>{{meta_title}}</h1>
-			<p>{{meta_description}}</p>
+{{!< default}}
+
+<section class="blog-list">
+	{{#foreach posts}}
+	<article class="blog-post {{post_class}}">
+		<header class="post-header">
+			<a href="{{url}}"><h2>{{{title}}}</h2></a>
 		</header>
-		<main class="blog">
-			<section class="blog-list">
-				{{#foreach posts}}
-				<article class="blog-post {{post_class}}">
-					<header class="post-header">
-						<a href="{{url}}"><h2>{{{title}}}</h2></a>
-					</header>
-					<section class="post-content">
-					<p>{{excerpt}}&hellip;</p>
-					</section>
-					<footer class="post-footer">
-						Written on a {{date format="dddd"}} <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>
-					</footer>
-				</article>
-				{{/foreach}}
-			</section>
-			<footer class="blog-footer">
-				{{pagination}}
-			</footer>
-		</main>
-	</div></div>
-</body>
-</html>
+		<section class="post-content">
+		<p>{{excerpt}}&hellip;</p>
+		</section>
+		<footer class="post-footer">
+			Written on a {{date format="dddd"}} <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>
+		</footer>
+	</article>
+	{{/foreach}}
+</section>
+<footer class="blog-footer">
+	{{pagination}}
+</footer>

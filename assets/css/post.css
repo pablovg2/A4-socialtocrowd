@@ -1,14 +1,4 @@
-.post-header h1 {font-size:200%;margin-bottom:20px}
-.post-content h2 {margin-bottom:20px}
-.post-content p {margin-bottom:20px}
-.post-content blockquote {border-left:2px solid rgb(239,239,239);padding-left:18px}
-.post-content img {display:block;margin:0 auto;max-width:100%}
-.post-content ol, .post-content ul {margin-left:40px}
-.post-content pre {background-color:rgb(239,239,239);border-radius:3px;margin-bottom:20px;padding:10px 6px;overflow:scroll}
-.post-content code {background-color:rgb(239,239,239);border-radius:3px;font-family:monospace;padding:0 4px;white-space:pre;word-break:normal;word-wrap:normal}
-.post-content hr {background-color:rgb(239,239,239);border:none;height:1px}
-
-.author-icon {background-size:contain;border-radius:12px;display:inline-block;height:24px;margin:0 6px;position:relative;top:6px;width:24px}
+.site-nav {margin-bottom:40px}
 
 aside.night-toggle {background-color:rgb(38,38,38);border-radius:12px;cursor:pointer;height:24px;position:absolute;right:10px;top:10px;width:24px}
 body, aside.night-toggle, .blog-post, .blog, .post-content pre, .post-content code, .post-content hr,  .post-content blockquote {transition:background .6s}

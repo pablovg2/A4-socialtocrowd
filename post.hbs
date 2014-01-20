@@ -15,6 +15,12 @@
 <body>
 	<aside class="night-toggle" onclick="document.body.classList.toggle('night')"></aside>
 	<div class="outer-wrapper"><div class="inner-wrapper">
+		<nav class="site-nav" role="site">
+			<ul>
+				<li><a href="{{@blog.url}}">Home</a></li>
+				<li><a href="{{@blog.url}}/about">About</a></li>
+			</ul>
+		</nav>
 		<main class="blog">
 			<article class="blog-post {{post_class}}">
 				{{#post}}
@@ -25,15 +31,10 @@
 					{{content}}
 				</section>
 				<footer class="post-footer">
-					Written by <h4>{{#if author.image}}<i class="author-icon" style="background-image:url('{{author.image}}')"></i>{{/if}}{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}
+					Written by <h4>{{author.name}}</h4> on a {{date format="dddd"}}, <time datetime="{{date format='YYYY-MM-DD'}}">{{date timeago="true"}}</time>{{#if tags}}, about {{tags}}{{/if}}
 				</footer>
 				{{/post}}
 			</article>
-			<footer class="blog-footer">
-				<nav class="pagination">
-					<a class="home" href="{{@blog.url}}">Back</a>
-				</nav>
-			</footer>
 		</main>
 	</div></div>
 </body>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>{{@blog.title}}</title>
+	<meta name="description" content="{{meta_description}}" />
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/default.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+	{{ghost_head}}
+</head>
+<body>
+	<aside class="site-cover">
+		<figure{{#if @blog.cover}} style="background-image:url({{@blog.cover}}){{/if}}">
+			<figcaption>
+				Powered by <a href="https://ghost.org">Ghost</a>
+			</figcaption>
+		</figure>
+	</aside>
+	<div class="outer-wrapper"><div class="inner-wrapper">
+		<header class="site-header">
+			<h1>{{#if @blog.logo}}<i class="site-logo" style="background-image:url({{@blog.logo}})"></i>{{/if}}{{@blog.title}}</h1>
+			<p>{{@blog.description}}</p>
+			<nav class="site-nav" role="site">
+				<ul>
+					<li><a href="{{@blog.url}}">Home</a></li>
+					<li><a href="{{@blog.url}}/about">About</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="site-main">
+			{{{body}}}
+		</main>
+	</div></div>
+</body>
+</html>
