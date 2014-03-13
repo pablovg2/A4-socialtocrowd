@@ -108,16 +108,24 @@ article.featured h2:before {
 article.featured a:hover h2:before { background-color: rgb(45,166,222); }
 
 @media all and (max-width:954px) {
-	.site-header { text-align: left; }
+	.site-header {
+		position: relative;
+		text-align: left;
+		z-index: 2;
+	}
 	.site-cover {
-		height: 33%;
 		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.site-cover figure {
 		position: absolute;
+		top: 0;
+		z-index: 1;
 	}
 	.outer-wrapper {
 		margin-left: 0;
-		position: absolute;
-		top: 33%;
+		position: relative;
 		width: 100%;
 	}
 }
