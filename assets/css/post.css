@@ -5,16 +5,16 @@
 .site-nav li + li { border-left: 1px solid rgb(239,239,239); }
 
 body {
-	font-size: 24px;
-	line-height: 36px;
+	font-size: 2vmax;
+	line-height: 3vmax;
 }
 
 h1 {
 	font-size: 200%;
-	margin-bottom: 60px;
+	margin-bottom: 4vmax;
 	text-align: center;
 }
-h2, h3, p { margin-bottom: 20px; }
+h2, h3, p { margin-bottom: 2vmax; }
 h2 { font-size: 150%; }
 h3 { font-size: 120%; }
 
