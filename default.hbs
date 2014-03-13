@@ -14,13 +14,6 @@
 </head>
 <body>
 	<aside class="site-cover">
-		<figure{{#if @blog.cover}} style="background-image:url({{@blog.cover}}){{/if}}">
-			<figcaption>
-				Powered by <a href="https://ghost.org">Ghost</a>
-			</figcaption>
-		</figure>
-	</aside>
-	<div class="outer-wrapper"><div class="inner-wrapper">
 		<header class="site-header">
 			<h1>{{#if @blog.logo}}<i class="site-logo" style="background-image:url({{@blog.logo}})"></i>{{/if}}{{@blog.title}}</h1>
 			<p>{{@blog.description}}</p>
@@ -31,6 +24,13 @@
 				</ul>
 			</nav>
 		</header>
+		<figure{{#if @blog.cover}} style="background-image:url({{@blog.cover}}){{/if}}">
+			<figcaption>
+				Powered by <a href="https://ghost.org">Ghost</a>
+			</figcaption>
+		</figure>
+	</aside>
+	<div class="outer-wrapper"><div class="inner-wrapper">
 		<main class="site-main">
 			{{{body}}}
 		</main>
