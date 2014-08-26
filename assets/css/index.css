@@ -1,3 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Just+Another+Hand);
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.links {
+font-size: 1.5em;
+padding: 20px;
+}
+
+.links a:hover{
+	color: #333;
+}
 h1 { margin-bottom: 20px; }
 h2 {
 	font-size: 24px;
@@ -10,7 +33,8 @@ h2 a {
 }
 
 .site-cover {
-	background-color: rgb(83,83,83);
+/*	background-color: rgb(83,83,83);*/
+	background-color: #21b384;
 	color: rgb(255,255,255);
 	height: 100%;
 	position: fixed;
@@ -26,6 +50,11 @@ h2 a {
 	position: absolute;
 	text-align: center;
 }
+.site-header h1 {
+	font-size: 2em;
+	color: #333;
+	font-family: 'Just Another Hand', cursive;
+}
 .site-logo {
 	background-size: contain;
 	border-radius: 16px;
@@ -36,6 +65,7 @@ h2 a {
 	position: relative;
 	top: 8px;
 	width: 32px;
+	display: none;
 }
 
 .site-cover figure {
@@ -62,7 +92,8 @@ h2 a {
 	margin-bottom: 40px;
 }
 .page-header { margin-bottom: 10px; }
-.page-header h2,.page-content p { margin-bottom: 20px; }
+.page-header h2 {font-size: 2em; }
+.page-content p { margin-bottom: 20px; }
 .page-content blockquote {
 	border-left: 2px solid rgb(239,239,239);
 	padding-left: 18px;

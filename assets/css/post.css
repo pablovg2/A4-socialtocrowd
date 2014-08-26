@@ -4,7 +4,7 @@
 }
 .site-nav ul { margin: 0; }
 .site-nav li a { color: rgb(136,136,136); }
-.site-nav li a:hover { color: rgb(45,166,222); }
+.site-nav li a:hover { color: #21b384; }
 .site-nav li + li { border-left: 1px solid rgb(239,239,239); }
 
 body {

@@ -8,25 +8,60 @@
 	<meta name="MobileOptimized" content="320" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
 	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,300" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/index.css"}}" />
 	{{ghost_head}}
 </head>
 <body>
 	<aside class="site-cover">
-		<header class="site-header">
-			<h1>{{#if @blog.logo}}<i class="site-logo" style="background-image:url({{@blog.logo}})"></i>{{/if}}{{@blog.title}}</h1>
-			<p>{{@blog.description}}</p>
-			<nav class="site-nav" role="site">
-				<ul>
-					<li><a href="{{@blog.url}}">Home</a></li>
-					<li><a href="{{@blog.url}}/about">About</a></li>
-				</ul>
-			</nav>
-		</header>
 		<figure{{#if @blog.cover}} style="background-image:url({{@blog.cover}}){{/if}}">
-			<figcaption>
-				Powered by <a href="https://ghost.org">Ghost</a>
+<div class="video-responsive">
+<iframe src="//player.vimeo.com/video/95522994?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>	
+		
+ <header class="site-header">
+                        <h1>{{#if @blog.logo}}<i class="site-logo" style="background-image:url({{@blog.logo}})"></i>{{/if}}{{@blog.title}}</h1>
+                        <p>{{@blog.description}}</p>
+                        <nav class="site-nav" role="site">
+                                <ul>
+                                        <li><a href="{{@blog.url}}">Inicio</a></li>
+                                        <li><a href="{{@blog.url}}/plataforma">Plataforma</a></li>
+                                        <li><a href="{{@blog.url}}/crowdfunding">Crowdfunding</a></li>
+                                        <li><a href="{{@blog.url}}/colabora">Colabora</a></li>
+					<li><a href="{{@blog.url}}/prensa">Prensa</a></li>
+                                </ul>
+                        </nav>
+
+					<div class="links">
+						<a href="http://twitter.com/socialtocrowd"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.facebook.com/socialtocrowd"><i class="fa fa-facebook-square"></i></a>
+						<a href="http://github.com/enredacoop/socialtocrowd"><i class="fa fa-github"></i></a>
+						<a href="mailto:info@socialtocrowd.org"><i class="fa fa-envelope"></i></a>
+
+					</div>
+					
+					<!-- mailchimp -->
+				<div class="suscriber">
+				<form action="http://enreda.us3.list-manage1.com/subscribe/post?u=279b072f7731d3c44289c5ffd&amp;id=a0956e2c53" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="col-lg-12  validate" target="_blank" novalidate>
+          <div class="input-group" style="width:500px;text-align:center;margin:0 auto;">
+          <input  type="email"  class="form-control input-lg" title="Don't worry. We hate spam, and will not share your email with anyone." placeholder="Introduce tu correo electrónico" name="EMAIL"  id="mce-EMAIL" >
+            <span class="input-group-btn"><button class="btn btn-lg btn-primary" type="submit" id="mc-embedded-subscribe"  ><i class="icon-envelope"></i></button></span>
+            
+            <input type="text" name="b_279b072f7731d3c44289c5ffd_a0956e2c53" value="" style="display:none">
+            <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+           							 </div>
+      						    </div>
+        				</form>
+				</div>
+		</header>
+<figcaption>
+
+
+				Powered by <a href="https://ghost.org">Ghost</a> <a href="http://enreda.coop/enredate" target="_blank" title="Hosted by ENREDA"><img src="http://enreda.coop/footer_ffffff.png" width="100px"></a>
 			</figcaption>
 		</figure>
 	</aside>

@@ -22,7 +22,9 @@ body {
 }
 
 a, a:visited { color: inherit; }
-a:hover { color: rgb(45,166,222); }
+a:hover { color: #21b384;
+/*rgb(45,166,222);*/
+ }
 
 .site-nav ul {
 	font-size: 18px;
@@ -33,18 +35,18 @@ a:hover { color: rgb(45,166,222); }
 	display: inline;
 }
 .site-nav li + li {
-	border-left: 1px solid rgba(255,255,255,0.4);
+/*	border-left: 1px solid rgba(255,255,255,0.4); */
 	margin-left: 20px;
 	padding-left: 20px;
 }
 .site-nav li a {
-	color: rgba(255,255,255,0.6);
+	color: rgba(255,255,255,1);
 	display: inline-block;
 	text-decoration: none;
 }
-.site-nav li a:hover { color: rgb(255,255,255); }
-.site-nav li a:active { color: rgba(255,255,255,0.6); }
-
+.site-nav li a:hover { 
+	color: rgba(255,255,255,0.6); }
+.site-nav li a:active { color: rgba(255,255,255,0.6); } 
 .site-main { padding: 40px; }
 
 .blog-post {
