@@ -108,4 +108,44 @@ hr {
 blockquote {
 	border-left: 2px solid rgb(239,239,239);
 	padding-left: 40px;
+
+}
+
+
+#suscriber {
+margin: 10px;
+}
+
+#suscriber input {
+width: 200px;
+height: 30px;
+padding: 10px;
+border: 1px solid transparent;
+border-radius: 6px;
+float: left;
+font-family: 'Roboto Condensed',sans-serif;
+font-size: 0.6em;
+color: #21b384;
+font-weight: bold;
+}
+
+#suscriber button {
+font-size: 1.5em;
+border: 1px solid transparent;
+border-radius: 4px;
+cursor: pointer;
+text-align: center;
+color: #21b384;
+}
+.btn i:hover {
+color: #333;
+}
+
+#suscriber .info {
+font-size: 0.6em;
+font-weight: bold;
+color: #333;
+text-shadow: none;
+float: left;
+margin: 10px;
 }
